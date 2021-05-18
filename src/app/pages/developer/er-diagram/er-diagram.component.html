@@ -1,0 +1,13 @@
+<navbar></navbar>
+
+<div class="container-fluid mt-3">
+  <div class="row" style="height: calc(100vh); overflow: auto;">
+    <div id="canvas"
+         class="col-sm-12">
+
+      <model *ngFor="let model of data.models"
+             [myModel]="model"></model>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<span class="align-self-center mr-auto">{{mySchema.name}}</span>
+<span class="align-self-center ml-3">
+  <i (click)="editSchema()"
+     class="uil uil-edit"></i></span>
+<span class="align-self-center ml-1">
+  <i (click)="deleteSchema()"
+     class="uil uil-times-circle"></i></span>
+<span class="align-self-center ml-2 d-inline-flex flex-column">
+  <i [class.disable]="first"
+     (click)="moveupSchema()"
+     class="uil uil-angle-double-up"></i>
+  <i [class.disable]="last"
+     (click)="movedownSchema()"
+     class="uil uil-angle-double-down"></i>
+</span>

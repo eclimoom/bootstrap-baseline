@@ -1,0 +1,20 @@
+<input type="text" placeholder="Username" name="username" [(ngModel)]="form.username" />
+<input type="text" placeholder="First Name" name="firstname" [(ngModel)]="form.firstname" />
+<input type="text" placeholder="Last Name" name="lastname" [(ngModel)]="form.lastname" />
+<input type="hidden" name="type" value="people">
+<button (click)="insert()">Add</button>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people">
+            <td>{{ person.firstname }}</td>
+            <td>{{ person.lastname }}</td>
+        </tr>
+    </tbody>
+</table>

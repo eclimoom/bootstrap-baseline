@@ -1,0 +1,98 @@
+#canvas {
+  position: relative;
+}
+
+#canvas .model-node {
+  position: absolute;
+  min-width: 200px;
+}
+
+#canvas .model-node:hover {
+  opacity: 0.6;
+}
+
+#canvas .model-node * {
+  font-size: 0.8rem;
+}
+
+#canvas .model-node h2 {
+  cursor: move;
+  margin: 0 !important;
+}
+
+#canvas .model-default-endpoint {
+  z-index: 6;
+}
+
+.icon-xxl {
+  height: 48px !important;
+  width: 48px !important;
+}
+
+.icon-xl {
+  height: 36px !important;
+  width: 36px !important;
+}
+
+.icon-md {
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.icon-sm {
+  height: 12px !important;
+  width: 12px !important;
+}
+
+.icon-sm {
+  height: 12px !important;
+  width: 12px !important;
+}
+
+.icon-red {
+  fill: firebrick !important;
+  fill-opacity: .5 !important;
+}
+
+.icon-green {
+  fill: seagreen !important;
+  fill-opacity: .5 !important;
+}
+
+.icon-blue {
+  fill: dodgerblue !important;
+  fill-opacity: .5 !important;
+}
+
+.icon-yellow {
+  fill: yellow !important;
+  fill-opacity: .5 !important;
+}
+
+.icon-orange {
+  fill: orangered !important;
+  fill-opacity: .5 !important;
+}
+
+.jtk-source-hover {
+  background: rgba(darkred, .2);
+  // opacity: .5 !important;
+}
+
+.jtk-target-hover {
+  background: rgba(darkred, .2);
+  // opacity: .5 !important;
+}
+
+.jtk-hover {
+  path {
+    stroke: darkred !important;
+  }
+  circle {
+    stroke: darkred !important;
+    fill: darkred !important;
+  }
+  opacity: .5;
+}
+
+

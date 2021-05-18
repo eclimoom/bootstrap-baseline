@@ -1,0 +1,88 @@
+<div class="row page-title">
+  <div class="col-sm-8 col-xl-6">
+    <h4 class="mb-1 mt-0">
+      ER Diagram Tool
+    </h4>
+  </div>
+  <div class="col-sm-4 col-xl-6 text-sm-right">
+    <div class="btn-group mb-1">
+      <div class="btn-group btn-group-toggle">
+        <div ngbDropdown
+             class="btn-group">
+          <button type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-toggle="dropdown"
+                  ngbDropdownToggle
+                  aria-expanded="false">
+            <i class="uil uil-file-alt"></i> File
+            <i class="uil uil-angle-down"></i></button>
+          <div class="dropdown-menu"
+               ngbDropdownMenu>
+            <a class="dropdown-item"
+               href="javascript: void(0)"
+               (click)="importJson()">Upload</a>
+            <a class="dropdown-item"
+               href="javascript: void(0)"
+               (click)="exportJson()">Download</a>
+          </div>
+        </div>
+        <div ngbDropdown
+             class="btn-group">
+          <button type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-toggle="dropdown"
+                  ngbDropdownToggle
+                  aria-expanded="false">
+            <i class="uil uil-edit-alt"></i> Edit
+            <i class="uil uil-angle-down"></i></button>
+          <div class="dropdown-menu"
+               ngbDropdownMenu>
+            <a class="dropdown-item"
+               href="javascript: void(0)"
+               (click)="createModel()">Create Model</a>
+          </div>
+        </div>
+        <div ngbDropdown
+             class="btn-group">
+          <button type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-toggle="dropdown"
+                  ngbDropdownToggle
+                  aria-expanded="false">
+            <i class="uil uil-cog"></i> Settings
+            <i class="uil uil-angle-down"></i></button>
+          <div class="dropdown-menu"
+               ngbDropdownMenu>
+            <a class="dropdown-item"
+               href="javascript: void(0)"
+               (click)="dataSetting()">Data Settings</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-success"
+                  (click)="scrollModal(scrollDataModal)">JSON
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Scrollable Modal -->
+<ng-template #scrollDataModal
+             let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Schema JSON</h5>
+    <button type="button"
+            class="close"
+            (click)="modal.dismiss('Cross click')"
+            aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+<pre>
+<code [highlight]="data | json"></code>
+</pre>
+  </div>
+</ng-template>
+
